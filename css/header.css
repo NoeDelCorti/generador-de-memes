@@ -1,0 +1,30 @@
+.header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    height: auto;
+    width: 100%;
+    background-color: #191E2B;
+    color: white;
+    
+}
+
+.header-title{
+    display: flex;
+    margin-top: 1.25rem;
+}
+
+.nav-header, .list-nav-header{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    padding:10px;
+}
+
+.list-nav-header{
+    /* background-color: aqua; */
+    width: 320px;
+}
