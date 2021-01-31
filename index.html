@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/section.css">
     <link rel="stylesheet" href="./css/aside.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Coda+Caption:wght@800&family=Josefin+Sans&family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <title>Generador de memes</title>
 </head>
 <body>
@@ -39,46 +40,53 @@
         </section>
         <!-- Fin de section -->
 
-        <!-- <span> -->
+        <!-- Boton descarga -->
             <button id="download-meme-button" class="download-button-text"><i class="fas fa-download"></i> Descarga tu meme</button>
-        <!-- </span> -->
+        
 
     </main>
     <!-- Fin del main -->
 
-    <!-- Comienzo del aside -->
+    <!-- Comienzo de aside -->
     <aside class="aside-panel">
-        <form>
-            <h2 class="aside-title">IMAGEN</h2>
-                <div>
-                    <label for="url">URL</label>
-                    <input type="text" id="url-img">
+    
+        <form id="text-form" class="text-form">
+            <h2 class="aside-title">TEXTO</h2>
+                <div class="little-box">
+                    <!-- <label for="url">URL</label>
+                    <input type="text" id="url-img"> -->
                 </div>
-                <div>
-                    <label for="url">Superior</label>
+                <div class="little-box">
+                    <label for="top-input">Superior</label>
+                    <textarea name="top-text"
+                        id="top-input" 
+                        cols="20"
+                        rows="2">
+                    </textarea>
                     <input type="text" id="top-input" value="TOP TEXT">
                 </div>
-                <div>
+                <div class="little-box">
                     <input id="top-check-1" type="checkbox">
                     <label for="top-check">Sin texto superior</label>    
                 </div>
-                <div>
+                <div class="little-box">
                     <label for="bott">Inferior</label>
                     <input type="text" id="bott" value="BOTTOM TEXT">
                 </div>
-                <div>
+                <div class="little-box">
                     <input id="top-check-2" type="checkbox">
                     <label for="top-check-2">Sin texto inferior</label>
                 </div>
-                <div>
+                <div class="little-box">
                     <label for="option">Fuente</label>
                     <select name="option" id="option">
-                        <option value="arial">Arial</option>
-                        <option value="arial-black">Arial Black</option>
-                        <option value="american-typewriter">American Typewriter</option>
-                        <option value="andale-mono">Andale Mono</option>
-                        <option value="impact">Impact</option>
-                        <option class="helvetica" value="helvetica">Helvetica</option>
+                        <option value="arial" style="font-family: Arial, Helvetica, sans-serif;">Arial</option>
+                        <option value="coda-caption" style="font-family:'Coda Caption', sans-serif;">Coda Caption</option>
+                        <option value="abril-fatface" style="font-family: 'Abril Fatface', cursive;">Abril Fatface</option>
+                        <option value="bebas-neue" style="font-family: 'Bebas Neue', cursive;">Bebas Neue</option>
+                        <option value="impact" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Impact</option>
+                        <option value="josefine-sans" style="font-family: 'Josefin Sans', sans-serif;">Josefin Sans</option>
+                        <option value="shadows-into-ligth" style="font-family: 'Shadows Into Light', cursive;">Shadows Into Light</option>
                     </select>
                 </div>
                 <div class="font-button">
@@ -94,18 +102,18 @@
                         <span id="color-text">#000000</span>
                     </div>
                 </div>
-                <div>
+                <div class="little-box">
                     <label for="back">Fondo</label>
                     <div class="color-buttons">
                         <input type="color" id="fondo" value="#ffffff">
                         <span id="back-color">#ffffff</span>
                     </div>
                 </div>
-                <div>
+                <div class="little-box">
                     <input type="checkbox" id="transparent">
                     <label for="transparent">Fondo transparente</label>
                 </div>
-                <div>
+                <div class="little-box">
                     <label>Contorno</label>
                 </div>
                 <div class="button-contorno">
@@ -113,11 +121,11 @@
                     <button>Claro</button>
                     <button>Oscuro</button>
                 </div>
-                <div>
+                <div class="little-box">
                     <label for="space">Espaciado</label>
                     <input type="number" id="space" value="17">
                 </div>
-                <div>
+                <div class="little-box">
                     <label for="interlinear">Interlineado</label>
                     <select name="innterlinear" id="interlinear">
                         <option value="0.8">0.8</option>
@@ -129,7 +137,7 @@
                 </div>
         </form>
     </aside>
-    <!-- Fin del aside -->
+    <!-- Fin de aside -->
     
 
     <script src="./js/app.js"></script>
