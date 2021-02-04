@@ -1,3 +1,5 @@
+
+
 *{
     margin: 0;
     padding: 0;
@@ -9,7 +11,18 @@ body{
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
-    height: 100%;
-    width: auto;
+   /*  height: 100vh;
+    width: auto; */
+    
+}
 
+:root{
+    --fondoPrimario:#D0ECE7;
+    --fondoSecundario:#ABEBC6;
+    --colorLetra: #2C3E50;
+    --fondoPrimarioOscuro:#148F77;
+    --fondoSecundarioOscuro: #0B5345;
+    --tonalidad:#A2D9CE ;
+    --colorLetraOscuro:#F0F3F4;
+    --generalFont:'Prompt', sans-serif;
 }

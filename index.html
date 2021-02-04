@@ -10,22 +10,29 @@
     <link rel="stylesheet" href="./css/aside.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Coda+Caption:wght@800&family=Josefin+Sans&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">    
     <title>Generador de memes</title>
 </head>
 <body>
     <!-- GENERADOR DE MEMES -->
     <!-- Comienzo de header -->
     <header class="header">
+        <div class="header-container">
         <h1 class="header-title">Generador de Memes</h1>
         
         <!-- Comienzo del nav -->
             <nav class="nav-header"> 
                 <ul class="list-nav-header">
-                    <li id="img-nav-header"><i class="far fa-file-image"></i> Imagen</li>
-                    <li id="text-nav-header"><i class="fas fa-font"></i> Texto</li>
-                    <li id="dark-mood-nav-header"><i class="far fa-lightbulb"></i> Modo oscuro</li>
+                    <li id="img-nav-header" class="item"><i class="far fa-file-image" class="item"></i> Imagen
+                    </li>
+                    <li id="text-nav-header" class="item"><i class="fas fa-font"></i> Texto
+                    </li>
+                    <li id="dark-mood-nav-header" class="item"><i class="far fa-lightbulb"></i> Modo oscuro
+                    </li>
                 </ul>
             </nav>
+        </div>
         <!-- Fin del nav  -->
     </header>
     <!-- Fin del header -->
@@ -34,9 +41,11 @@
     <main class="main">
         <!-- Comienzo de section -->
         <section class="section">
+            <div class="section-container">
             <article id="first-text-section" class="top-input">TOP TEXT</article>
-            <article class="img-center-section"></article>
+            <article id="img-center-section" class="img-center-section"></article>
             <article id="second-text-section" class="bottom-input">BOTTOM TEXT</article>
+            </div>
         </section>
         <!-- Fin de section -->
 
@@ -49,18 +58,16 @@
 
     <!-- Comienzo de aside -->
     <aside class="aside-panel">
+
+        <!-- Comienzo Formulario Texto -->
     
-        <form id="text-form" class="text-form">
+        <form id="text-form" class="text-form" hidden="">
             <h2 class="aside-title">TEXTO</h2>
-                <div class="little-box">
-                    <!-- <label for="url">URL</label>
-                    <input type="text" id="url-img"> -->
-                </div>
                 <div class="little-box">
                     <label for="top-input">Superior</label>
                     <textarea name="top-text"
                         id="top-input" 
-                        cols="20"
+                        cols="22"
                         rows="2">
                     </textarea>
                     <input type="text" id="top-input" value="TOP TEXT">
@@ -71,6 +78,11 @@
                 </div>
                 <div class="little-box">
                     <label for="bott">Inferior</label>
+                    <textarea name="bottom-text"
+                        id="top-input" 
+                        cols="22"
+                        rows="2">
+                    </textarea>
                     <input type="text" id="bott" value="BOTTOM TEXT">
                 </div>
                 <div class="little-box">
@@ -135,7 +147,93 @@
                         <option value="2">2</option>
                     </select>
                 </div>
-        </form>
+            </form>
+        <!-- Fin Formulario Texto -->
+
+        <!-- Comienzo Formulario Imagen -->
+
+            <form id="img-form" class="img-form">
+                <div class="little-box">
+                    <h2 class="aside-title">IMAGEN</h2>
+                </div>
+
+                <div class="little-box">
+                    <label for="url">URL</label>
+                    <input type="url" id="url-img" value="">
+                </div>
+            <!-- <input type="file" > -->
+                <div class="little-box">
+                        <label for="img-fondo">Fondo</label>
+                        <input type="color" id="img-fondo">
+                </div>
+                <div class="little-box">
+                    <label for="effect">Efecto</label>
+                </div>
+
+                <div class="little-box">
+                    <select name="effect" id="effect">
+                        <option value="#">Ninguno</option>
+                        <option value="lighten">Aclarar</option>
+                        <option value="darken">Oscurecer</option>
+                        <option value="difference">Diferencia</option>
+                        <option value="luminosity">Luminosidad</option>
+                        <option value="multiply">Multiplicar</option>                    
+                    </select>
+                </div>
+                
+                <div class="little-box">
+                <h3>Filtros</h3>
+                <br>
+                    
+                    <label for="light">Brillo</label>
+                    <input type="range" id="light" min="0" max="1" step=".1" value="1">
+                </div>
+                
+                <div class="little-box">
+                    <label for="opacity">Opacidad</label>
+                    <input type="range" id="opacity" min="0" max="1" step=".1" value="1">
+                </div>
+
+                <div class="little-box">    
+                <label for="contrast">Contraste</label>
+                    <input type="range" id="contrast" min="100" max="1000" step="1" value="100">
+                </div>
+
+                <div class="little-box">
+                    <label for="blur">Desenfoque</label>
+                    <input type="range" id="blur" min="0" max="10" step=".1" value="0">
+                </div> 
+                
+                <div class="little-box">
+                    <label for="scale">Escala de grises</label>
+                    <input type="range" id="scale" min="0" max="100" step="1" value="0"> 
+                </div>
+
+                <div class="little-box">
+                    <label for="sepia">Sepia</label>
+                    <input type="range" id="sepia" min="0" max="100" step="1" value="0">
+                </div>
+
+                <div class="little-box">
+                    <label for="hue">Hue</label>
+                    <input type="range" id="hue" min="0" max="359" step="1" value="0">
+                </div>
+
+                <div class="little-box">
+                    <label for="saturation">Saturado</label>
+                    <input type="range" id="saturation" min="100" max="1000" step="10" value="100">
+                </div>
+
+                <div class="little-box">
+                    <label for="negativ">Negativo</label>
+                    <input type="range" id="negativ" min="0" max="1" step=".1" value="0">
+                </div>
+
+                <div class="little-box">
+                    <button id="resetButton">Restablecer</button>
+                </div>
+            </form>
+        
     </aside>
     <!-- Fin de aside -->
     

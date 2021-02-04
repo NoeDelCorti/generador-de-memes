@@ -10,9 +10,9 @@
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 100vh;
+    height: auto;
     width: auto; /* CHEQUEAR CON RESPONSIVE */
-    background-color:#30343F;
+    background: var(--fondoPrimario);
 }
 
 .download-button-text{
@@ -24,7 +24,9 @@
     border: none;
     font-size: 10px;
     /* outline: none; */
-    margin-top: 1.25rem;
+    /* margin-top: 1.25rem; */
     list-style: none;
+    border: 1px solid rgb(8, 46, 8);
     
 }
+

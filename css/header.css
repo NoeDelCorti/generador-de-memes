@@ -7,27 +7,46 @@
     align-items: center;
     height: auto;
     width: 100%;
-    background-color: #191E2B;
-    color: white;
-    font-family: 'Mukta Vaani', sans-serif;
+    background:var(--fondoSecundario);
+    color: var(--colorLetra);
+    font-family: var(--generalFont);
+}
+
+.header-container{
+    display: flex;
+    flex-direction: column;
+    /* background-color: hotpink; */
+    
+   
 }
 
 .header-title{
     display: flex;
     margin-top: 0.625rem;
     font-size: 1.875rem;
+    /* background-color: green; */
+    align-self: center;
 }
 
 .nav-header, .list-nav-header{
     display: flex;
     flex-direction: row;
     list-style: none;
-    justify-content: space-between;
+    justify-content: space-around;
     padding:5px;
+    
 }
 
 .list-nav-header{
-    /* background-color: aqua; */
-    width: 320px;
+    display: flex;
+    justify-content: space-around;
+    width: 400px;
+}
+
+.item{
+    border: 1px solid #2C3E50;
+    padding: 5px;
+    border-radius: 2px;
+    
 }
 
