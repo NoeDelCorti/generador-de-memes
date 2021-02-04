@@ -5,53 +5,40 @@
     box-sizing: border-box;
     align-self: flex-end;
     flex-direction: column;
-    padding: 1.875rem 0.9375rem;
-    width: 16.25rem;
-    height: 100vh;
+    justify-content: center;
+    padding-left: 10px;
     background:var(--tonalidad);
     color:var(--colorLetra);
-    float: left;
-    overflow: auto;
-    position: fixed; 
-    font-family: var(--generalFont)  
-    
+    font-family: var(--generalFont);  
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 20%;    
 }
 
-.filtro{
-    filter: brightness(1);
-    filter: opacity(1);
-    filter: contrast();
-    filter: blur();
-    filter: grayscale();
-    filter: sepia();
-    filter: hue-rotate();
-    filter: saturate();
-    filter: invert();
-}
-
-.filtor{
-    filter: brightness() opacity()
-}
-
-#resetButton{
+/* .aside-text-container{
     display: flex;
-    background-color: rgb(146, 139, 146);
-    border-radius: 5px;
-    justify-content: center;
-    text-align: center;
-    width: 50%;
-    height: 5vh;
+    align-content: center;
+    flex-direction: column;
+
+} */
+
+
+.reset-button{
+    display: flex;
+    background-color: rgb(75, 99, 75);
+    border-radius: 3px;
     padding: 8px;
+    width: auto;
+    color: #fff;
     border: none;
-    color: lightyellow;
+    font-size: 10px;
+    list-style: none;
+    border: 1px solid rgb(8, 46, 8);
     font-weight: bold;
 }
 
 .aside-tille, .little-box, .font-button, .button-contorno{
-    padding: 8px;
-}
-@media (max-width:900px) and (min-width:320px){
-    .aside-panel{
-        display: none;
-    }
+    padding: 2px;
 }

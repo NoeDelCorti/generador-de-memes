@@ -10,21 +10,19 @@
     background:var(--fondoSecundario);
     color: var(--colorLetra);
     font-family: var(--generalFont);
+    /* background-color: blue; */    
 }
 
 .header-container{
     display: flex;
     flex-direction: column;
-    /* background-color: hotpink; */
-    
-   
+    /* padding: 10px; */
+    /* background-color: burlywood; */
 }
 
 .header-title{
     display: flex;
-    margin-top: 0.625rem;
     font-size: 1.875rem;
-    /* background-color: green; */
     align-self: center;
 }
 
@@ -43,10 +41,9 @@
     width: 400px;
 }
 
-.item{
+/* .item{
     border: 1px solid #2C3E50;
     padding: 5px;
     border-radius: 2px;
-    
-}
+} */
 
