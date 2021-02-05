@@ -10,7 +10,6 @@
     background:var(--tonalidad);
     color:var(--colorLetra);
     font-family: var(--generalFont); 
-    font-size: 18px; 
     position: fixed;
     right: 0;
     top: 0;
@@ -21,15 +20,16 @@
     
 }
 
-/* .aside-text-container{
+.aside-text-container{
     display: flex;
     align-content: center;
     flex-direction: column;
+    font-size: 18px; 
 
-} */
+}
 
 .aside-title{
-    padding-top: 10%;
+    padding-top: 5%;
 }
 
 
@@ -45,13 +45,14 @@
     list-style: none;
     border: 1px solid rgb(8, 46, 8);
     font-weight: bold;
+    justify-content: center;
 }
 
 .aside-text-container{
     font-size: 20px;
 }
 
-.aside-tille, .little-box, .font-button, .button-contorno{
+.aside-tille, .little-box, .font-button, .button-contorno, .div-button{
     padding: 2px;
 }
 
@@ -60,22 +61,58 @@
     flex-direction: column;
 }
 
-.little-box input{
-    width: 70%;
+.sub-text{
+    font-size: 15px;
+}
+
+.little-box, .input-littlebox, .font-button, .button-contorno, .options{
+    width: 100%;
+    /* height: 5vh; */
+    border-radius: 5px;
+    padding: 5px;
+    border-style: none;
     
 }
 
-.check-class{
-    flex-direction: row;
-    justify-content: space-around;
+.font-size{
+    width: 20%;
+    border-radius: 5px;
+    padding: 5px;
+    border-style: none;
 }
 
-.check-class input{
-    width: 5%;
-    padding: 2px;
-    line-height: 2px;
+.color-options{
+    width: 26%;
+    height: 4vh;
+}
+.direction{
+    display: flex;
+    justify-content: space-between;
 }
 
-.check-class label{
-    width: 95%;
+.direction-button{
+    width: 15%;
+    height: 4vh;
+    background-color: var(--fondoPrimarioOscuro);
+    font-family: var(--generalFont);
+    color: var(--colorLetraOscuro);
+    border-radius: 5px;
+    border-style: none;
+    font-weight: bold;
 }
+
+
+.background-button{
+    width: 28%;
+    height: 4vh;
+    font-size: 18px;
+    background-color: var(--fondoPrimarioOscuro);
+    font-family: var(--generalFont);
+    color: var(--colorLetraOscuro);
+    border-radius: 5px;
+    border-style: none;
+    /* font-weight: bold; */
+}
+
+
+

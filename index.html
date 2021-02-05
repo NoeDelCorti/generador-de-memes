@@ -18,12 +18,15 @@
     <!-- GENERADOR DE MEMES -->
     
     <!-- Comienzo de header -->
+
     <header id="header" class="header">
         <div id="header-container" class="header-container">
             <h1 class="header-title">
                 Generador de Memes
             </h1>
+
         <!-- Comienzo del nav -->
+
             <nav id="nav-header" class="nav-header"> 
                 <ul id="list-nav-header" class="list-nav-header">
                     <li id="img-nav-header" class="item"><i class="far fa-file-image" class="item"></i> Imagen
@@ -36,23 +39,27 @@
             </nav>
         </div>
         <!-- Fin del nav  -->
+
     </header>
+
     <!-- Fin del header -->
 
     <!-- Comienzo del main -->
+
     <main id="main" class="main">
         
         <!-- Comienzo de section -->
+
         <section id="section" class="section">
-            <!-- <div id="section-container" class="section-container"> -->
             <article id="first-text-section" class="top-input">TOP TEXT</article>
             <article id="img-center-section" class="img-center-section"></article>
             <article id="second-text-section" class="bottom-input">BOTTOM TEXT</article>
-            <!-- </div> -->
         </section>
+
         <!-- Fin de section -->
 
         <!-- Boton descarga -->
+            
             <button id="download-meme-button" class="download-button-text"><i class="fas fa-download"></i> Descarga tu meme</button>
         
         <!-- Comienzo de aside -->
@@ -60,6 +67,7 @@
         <aside id="aside-panel" class="aside-panel">
 
         <!-- Comienzo Formulario Texto -->
+
         <div class="aside-text-container">
         
             <form id="text-form" class="text-form" hidden="">
@@ -67,42 +75,32 @@
                 <div class="little-box">
                     <label for="top-input">Superior</label>
                 </div>
-                <!-- <div class="little-box">
-                    <textarea name="top-text"
-                        id="top-input" 
-                        cols="22"
-                        rows="2">
-                    </textarea>
-                 </div>    -->
                 <div class="little-box">
-                    <input type="text" id="top-input" value="TOP TEXT" placeholder="TOP TEXT"> 
+                    <input type="text" id="top-input" class="input-littlebox" value="TOP TEXT" placeholder="TOP TEXT"> 
                 </div>
                 <div class="little-box">
-                    <input id="top-check-1" type="checkbox">
-                    <label for="top-check">Sin texto superior</label>    
+                    <span>
+                        <input id="top-check-1" type="checkbox">
+                        <label id="sub-text" for="top-check" class="sub-text">Sin texto superior</label>
+                    </span>        
                 </div>
                 <div class="little-box">
                     <label for="bott">Inferior</label>
                 </div>
-               <!--  <div class="little-box">
-                    <textarea name="bottom-text"
-                        id="top-input" 
-                        cols="22"
-                        rows="2">
-                    </textarea>
-                </div> -->
                 <div class="little-box">
-                    <input type="text" id="bottom-input" value="BOTTOM TEXT" placeholder="BOTTOM TEXT">
+                    <input type="text" id="bottom-input" class="input-littlebox" value="BOTTOM TEXT" placeholder="BOTTOM TEXT">
                 </div>
                 <div class="little-box check-class" >
-                    <input id="top-check-2" type="checkbox">
-                    <label for="top-check-2">Sin texto inferior</label>
+                    <span>
+                        <input id="top-check-2" type="checkbox">
+                        <label id="sub-text" for="top-check-2" class="sub-text">Sin texto inferior</label>
+                    </span>
                 </div>
                 <div class="little-box">
                     <label for="option">Fuente</label>
                 </div>
                 <div class="little-box">
-                    <select name="option" id="option">
+                    <select name="option" id="option" class="options">
                         <option value="arial" style="font-family: Arial, Helvetica, sans-serif;">Arial</option>
                         <option value="coda-caption" style="font-family:'Coda Caption', sans-serif;">Coda Caption</option>
                         <option value="abril-fatface" style="font-family: 'Abril Fatface', cursive;">Abril Fatface</option>
@@ -112,45 +110,41 @@
                         <option value="shadows-into-ligth" style="font-family: 'Shadows Into Light', cursive;">Shadows Into Light</option>
                     </select>
                 </div>
-                <div class="font-button">
-                    <input id="input-size" type="number" value="40" min="0" max="50">
-                    <button id="left">I</button>
-                    <button id="center">C</button>
-                    <button id="right">D</button>
+                <div class="font-button direction">
+                    <input id="input-size" class="font-size" type="number" value="40" min="0" max="50">
+                    <button id="left" class="direction-button">I</button>
+                    <button id="center" class="direction-button">C</button>
+                    <button id="right" class="direction-button">D</button>
                 </div>
-                <div class="font-button">
-                    <label for="color">Color</label>
-                    <div class="color-buttons">
-                        <input type="color" id="color" value="#000000">
-                        <span id="color-text">#000000</span>
-                    </div>
+                
+                <div class="font-button <!-- little-button -->">
+                    <label for="color sub-text">Color</label>
+                        <input type="color" id="color" class="color-options" value="#000000" placeholder="#000000"> <!-- /// preguntar cómo visualizar el placeholder? /// -->
+                    <label for="back sub-text">Fondo</label>
+                        <input type="color" id="fondo" class="color-options" value="#ffffff" placeholder="#ffffff"> <!-- /// preguntar cómo visualizar el placeholder? /// -->
+                        <br>
                 </div>
-                <div class="little-box">
-                    <label for="back">Fondo</label>
-                    <div class="color-buttons">
-                        <input type="color" id="fondo" value="#ffffff">
-                        <span id="back-color">#ffffff</span>
-                    </div>
-                </div>
-                <div class="little-box">
-                    <input type="checkbox" id="transparent">
-                    <label for="transparent">Fondo transparente</label>
+                <div class="little-box sub-text">
+                    <span>
+                        <input type="checkbox" id="transparent">
+                        <label id="sub-text" for="transparent" class="sub-text">Fondo transparente</label>
+                    </span>
                 </div>
                 <div class="little-box">
                     <label>Contorno</label>
                 </div>
                 <div class="button-contorno">
-                    <button>Ninguno</button>
-                    <button>Claro</button>
-                    <button>Oscuro</button>
+                    <button class="background-button">Ninguno</button>
+                    <button class="background-button">Claro</button>
+                    <button class="background-button">Oscuro</button>
                 </div>
                 <div class="little-box">
-                    <label for="space">Espaciado</label>
-                    <input type="number" id="space" value="17">
+                    <label for="space" >Espaciado</label>
+                    <input type="number" id="space" class="little-box" value="17">
                 </div>
                 <div class="little-box">
                     <label for="interlinear">Interlineado</label>
-                    <select name="innterlinear" id="interlinear">
+                    <select name="innterlinear" id="interlinear" class="little-box">
                         <option value="0.8">0.8</option>
                         <option value="1">1</option>
                         <option value="1.2">1.2</option>
@@ -160,30 +154,31 @@
                 </div>
             </form>
         </div>
+
         <!-- Fin Formulario Texto -->
 
         <!-- Comienzo Formulario Imagen -->
-
+        <div class="aside-img-container">
             <form id="img-form" class="img-form">
                 <div class="little-box">
-                    <h2 class="aside-title">IMAGEN</h2>
+                    <h2 class="aside-title-img">IMAGEN</h2>
                 </div>
 
                 <div class="little-box">
-                    <label for="url">URL</label>
-                    <input type="url" id="url-img" value="">
+                    <label for="url" class="sub-text-img">URL</label>
+                    <input type="url" id="url-img" class="input-littlebox" value="">
                 </div>
             <!-- <input type="file" > -->
                 <div class="little-box">
-                        <label for="img-fondo">Fondo</label>
-                        <input type="color" id="img-fondo">
+                        <label for="img-fondo" class="sub-text-img">Fondo</label>
+                        <input type="color" id="img-fondo" class="input-littlebox">
                 </div>
                 <div class="little-box">
-                    <label for="effect">Efecto</label>
+                    <label for="effect" class="sub-text-img">Efecto</label>
                 </div>
 
                 <div class="little-box">
-                    <select name="effect" id="effect">
+                    <select name="effect" id="effect" class="options">
                         <option value="#">Ninguno</option>
                         <option value="lighten">Aclarar</option>
                         <option value="darken">Oscurecer</option>
@@ -196,7 +191,7 @@
                 <div class="little-box">
                 <h3>Filtros</h3>
                     
-                    <label for="light">Brillo</label>
+                    <label for="light" class="sub-text-img">Brillo</label>
                     <input type="range" id="light" min="0" max="1" step=".1" value="1">
                 </div>
                 
@@ -236,7 +231,7 @@
                 </div>
 
                 <div class="little-box">
-                    <label for="negativ">Negativo</label>
+                    <label for="negativ sub-text">Negativo</label>
                     <input type="range" id="negativ" min="0" max="1" step=".1" value="0">
                 </div>
 
@@ -244,6 +239,7 @@
                     <button id="reset-button" class="reset-button">RESTABLECER</button>
                 </div>
             </form>
+        </div>
         
     </aside>
     <!-- Fin de aside -->
