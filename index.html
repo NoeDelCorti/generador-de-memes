@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="./css/section.css">
     <link rel="stylesheet" href="./css/aside.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Coda+Caption:wght@800&family=Josefin+Sans&family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Coda+Caption:wght@800&family=Prompt:wght@300&display=swap" rel="stylesheet"> 
+    
     <title>Generador de memes</title>
 </head>
 <body>
@@ -67,15 +67,15 @@
                 <div class="little-box">
                     <label for="top-input">Superior</label>
                 </div>
-                <div class="little-box">
+                <!-- <div class="little-box">
                     <textarea name="top-text"
                         id="top-input" 
                         cols="22"
                         rows="2">
                     </textarea>
-                 </div>   
+                 </div>    -->
                 <div class="little-box">
-                    <input type="text" id="top-input" value="TOP TEXT">
+                    <input type="text" id="top-input" value="TOP TEXT" placeholder="TOP TEXT"> 
                 </div>
                 <div class="little-box">
                     <input id="top-check-1" type="checkbox">
@@ -84,17 +84,17 @@
                 <div class="little-box">
                     <label for="bott">Inferior</label>
                 </div>
-                <div class="little-box">
+               <!--  <div class="little-box">
                     <textarea name="bottom-text"
                         id="top-input" 
                         cols="22"
                         rows="2">
                     </textarea>
-                </div>
+                </div> -->
                 <div class="little-box">
-                    <input type="text" id="bottom-value" value="BOTTOM TEXT">
+                    <input type="text" id="bottom-input" value="BOTTOM TEXT" placeholder="BOTTOM TEXT">
                 </div>
-                <div class="little-box">
+                <div class="little-box check-class" >
                     <input id="top-check-2" type="checkbox">
                     <label for="top-check-2">Sin texto inferior</label>
                 </div>
@@ -195,7 +195,6 @@
                 
                 <div class="little-box">
                 <h3>Filtros</h3>
-                <br>
                     
                     <label for="light">Brillo</label>
                     <input type="range" id="light" min="0" max="1" step=".1" value="1">

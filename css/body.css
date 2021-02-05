@@ -16,6 +16,7 @@ body{
     width: 100%;
     height: 100vh;
     
+    
 }
 
 :root{
@@ -26,5 +27,5 @@ body{
     --fondoSecundarioOscuro: #0B5345;
     --tonalidad:#A2D9CE ;
     --colorLetraOscuro:#F0F3F4;
-    --generalFont:'Prompt', sans-serif;
+    --generalFont:'Bebas Neue', cursive;;
 }

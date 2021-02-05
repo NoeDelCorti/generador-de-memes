@@ -13,7 +13,7 @@
     height: 100vh;
     width: 100%; /* CHEQUEAR CON RESPONSIVE */
     background: var(--fondoPrimario);
-    /* background-color: crimson; */
+
 }
 
 .download-button-text{
