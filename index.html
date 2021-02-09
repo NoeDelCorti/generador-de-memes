@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="./css/aside.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Coda+Caption:wght@800&family=Prompt:wght@300&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Coda+Caption:wght@800&family=Josefin+Sans&family=Shadows+Into+Light&display=swap" rel="stylesheet">
     
     <title>Generador de memes</title>
 </head>
-<body>
+<body class="dark-mood light-mood">
     <!-- GENERADOR DE MEMES -->
     
     <!-- Comienzo de header -->
@@ -33,7 +33,9 @@
                     </li>
                     <li id="text-nav-header" class="item"><i class="fas fa-font"></i> Texto
                     </li>
-                    <li id="dark-mood-nav-header" class="item"><i class="far fa-lightbulb"></i> Modo oscuro
+                    <li id="dark-mood-nav-header" class="item change-ligth-mood" onclick="changeLigthMood()"><i class="far fa-lightbulb"></i> Modo oscuro
+                    </li>
+                    <li id="ligth-mood-nav-header" class="item change-dark-mood"  onclick="changeDarkMood()"><i class="far fa-lightbulb"></i> Modo claro
                     </li>
                 </ul>
             </nav>
@@ -51,7 +53,7 @@
         <!-- Comienzo de section -->
 
         <section id="section" class="section">
-            <article id="first-text-section" class="top-input">TOP TEXT</article>
+            <article id="first-text-section"  class="top-input">TOP TEXT</article>
             <article id="img-center-section" class="img-center-section"></article>
             <article id="second-text-section" class="bottom-input">BOTTOM TEXT</article>
         </section>
@@ -101,42 +103,41 @@
                 </div>
                 <div class="little-box">
                     <select name="option" id="option" class="options">
-                        <option value="arial" style="font-family: Arial, Helvetica, sans-serif;">Arial</option>
-                        <option value="coda-caption" style="font-family:'Coda Caption', sans-serif;">Coda Caption</option>
-                        <option value="abril-fatface" style="font-family: 'Abril Fatface', cursive;">Abril Fatface</option>
-                        <option value="bebas-neue" style="font-family: 'Bebas Neue', cursive;">Bebas Neue</option>
-                        <option value="impact" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Impact</option>
-                        <option value="josefine-sans" style="font-family: 'Josefin Sans', sans-serif;">Josefin Sans</option>
-                        <option value="shadows-into-ligth" style="font-family: 'Shadows Into Light', cursive;">Shadows Into Light</option>
+                        <option value="Franklin Gothic Medium" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Franklin Gothic Medium</option>
+                        <option value="Segoe UI" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Segoe UI</option>
+                        <option value="verdana" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Verdana</option>
+                        <option value="Trebuchet" style="font-family:Arial, Helvetica, sans-serif">Arial</option>
+                        <option value="impact" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">Impact</option>
+                        <option value="Cambria" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Gill Sans</option>
                     </select>
                 </div>
                 <div class="font-button direction">
                     <input id="input-size" class="font-size" type="number" value="40" min="0" max="50">
-                    <button id="left" class="direction-button">I</button>
-                    <button id="center" class="direction-button">C</button>
-                    <button id="right" class="direction-button">D</button>
+                    <button id="left" class="direction-button" onclick="stopDefAction(event);">I</button>
+                    <button id="center" class="direction-button" onclick="stopDefAction(event);">C</button>
+                    <button id="right" class="direction-button" onclick="stopDefAction(event);">D</button>
                 </div>
                 
                 <div class="font-button <!-- little-button -->">
-                    <label for="color sub-text">Color</label>
+                    <label for="color" class="sub-text">Color</label>
                         <input type="color" id="color" class="color-options" value="#000000" placeholder="#000000"> <!-- /// preguntar cómo visualizar el placeholder? /// -->
-                    <label for="back sub-text"> Fondo</label>
-                        <input type="color" id="fondo" class="color-options" value="#ffffff" placeholder="#ffffff"> <!-- /// preguntar cómo visualizar el placeholder? /// -->
+                    <label for="back" class="sub-text"> Fondo</label>
+                        <input type="color" id="back" class="color-options" value="#ffffff" placeholder="#ffffff"> <!-- /// preguntar cómo visualizar el placeholder? /// -->
                         <br>
                 </div>
                 <div class="little-box sub-text">
                     <span>
                         <input type="checkbox" id="transparent">
-                        <label id="sub-text" for="transparent" class="sub-text">Fondo transparente</label>
+                        <label id="transparente" for="transparente" class="sub-text">Fondo transparente</label>
                     </span>
                 </div>
                 <div class="little-box">
                     <label>Contorno</label>
                 </div>
                 <div class="button-contorno">
-                    <button class="background-button">Ninguno</button>
-                    <button class="background-button">Claro</button>
-                    <button class="background-button">Oscuro</button>
+                    <button class="background-button" id="none" onclick="stopDefAction(event);">Ninguno</button>
+                    <button class="background-button" id="ligth" onclick="stopDefAction(event);">Claro</button>
+                    <button class="background-button" id="dark-button"  onclick="stopDefAction(event);">Oscuro</button>
                 </div>
                 <div class="little-box">
                     <label for="space" >Espaciado</label>
@@ -166,7 +167,7 @@
                 <!-- </div> -->
 
                 <div class="little-box">
-                    <label for="url" class="sub-text-img">URL</label>
+                    <label for="url-img" class="sub-text-img">URL</label>
                     <input type="url" id="url-img" class="input-littlebox" value="">
                 </div>
             <!-- <input type="file" > -->

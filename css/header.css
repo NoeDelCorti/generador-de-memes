@@ -8,7 +8,7 @@
     height: auto;
     width: 100%;
     background:var(--fondoSecundario);
-    color: var(--colorLetra);
+    color: var(--color-titulo-header);
     font-family: var(--generalFont);
     /* background-color: blue; */    
 }
@@ -44,9 +44,6 @@
     font-size: 20px;
 }
 
-/* .item{
-    border: 1px solid #2C3E50;
-    padding: 5px;
-    border-radius: 2px;
+/* .list-nav-header{
+    background: var(--fondoPrimarioOscuro);
 } */
-
