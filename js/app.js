@@ -87,7 +87,7 @@ option.addEventListener('change', () =>{
 urlImg.addEventListener('keyup', () =>{
     /* consol.log(urlImg) */
     const imagenCenter = urlImg.value;
-    imgCenterSection.style.backgroundImage=`url('${imagenCenter}')`;
+    imgCenterSection.style.backgroundImage=`url('${imagenCenter}')`
 })
 
 left.addEventListener('click', () =>{
