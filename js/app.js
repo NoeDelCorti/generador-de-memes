@@ -1,27 +1,27 @@
 
 /////////////////// CONSTANTES ///////////////////
 
-// HEADER //
+// HEADER
 const header = document.getElementById('header'); // header
 /* const imgNavHeader = document.getElementById('img-nav-header'); */ // pestaña imagen - nav header
 const textNavHeader = document.getElementById('text-nav-header'); // pestaña texto - nav header
 const darkMoodNavHeader = document.getElementById ('dark-mood-nav-header'); // pestaña modo oscuro - nav header
 const ligthMoodHeader = document.getElementById('ligth-mood-nav-header')
-
-// MAIN //
+// MAIN
+const urlImg = document.getElementById('url-img'); // input url imagen - pestaña imagen - aside
+const imgCenterSection = document.getElementById('img-center-section'); // imagen meme - section
+const textForm = document.getElementById('text-form'); // formulario texto - pestaña texto - aside
+const imgForm = document.getElementById('img-form'); // formulario imagen - pestaña imagen -aside
 const firstTextSection = document.getElementById('first-text-section'); // campo texto superior - section
 const secondTextSection = document.getElementById('second-text-section'); // campo texto inferior - section
+const bottomInput = document.getElementById('bottom-input'); // input texto inferior - aside
 const downloadMemeButton = document.getElementById('download-meme-button'); // boton de descarga de meme - debajo de section - main
 const darkMood = document.getElementById('dark-mood'); // moso oscuro body
 const ligthMood = document.getElementById('ligth-mood'); // modo claro var css
-const imgCenterSection = document.getElementById('img-center-section'); // imagen meme - section
 
-// ASIDE //
-// FORMULARIO TEXTO
-const textForm = document.getElementById('text-form'); // formulario texto - pestaña texto - aside
+// ASIDE
 const asidePanel = document.getElementById('aside-panel'); // aside
 const topInput = document.getElementById('top-input'); // input texto superior pestaña texto - aside
-const bottomInput = document.getElementById('bottom-input'); // input texto inferior - aside
 const topCheckOne = document.getElementById('top-check-1'); // input opción sin texto superior - aside
 const bottInput = document.getElementById('bott-input'); // input texto inferior pestaña texto - aside
 const topCheckTwo = document.getElementById('top-check-2'); // input opción sin texto inferior - aside
@@ -32,35 +32,11 @@ const center = document.getElementById('center'); // boton de centrar panel text
 const right = document.getElementById('right'); // boton alinear a la derecha panel texto - aside
 const color = document.getElementById('color'); // opción de color en pestaña texto - aside
 const back = document.getElementById('back');
-const transparent = document.getElementById('transparent'); // input tipo CHECKBOX fondo transparente
+const transparent = document.getElementById('transparent'); // input tipo checkbox fondo transparente
 const transparente = document.getElementById('transparente'); // label transparente
-
-// FALTA DARLE FUNCIONALIDAD A LOS BOTONES DE CONTORNO
-/* const none = document.getElementById('none'); // boton 'NINGUNO' de     contorno panel texto - aside
-const ligth = document.getElementById('ligth'); // boton 'CLARO' de     contorno panel texto - aside
-const darkButton = document.getElementById('dark-button'); // boton 'Oscuro' de contorno panel texto - aside */
-
-const space = document.getElementById('space'); // input espaciado pestaña texto - aside
-
-const interlinear = document.getElementById('interlinear'); // input interlineado pesta{a texto - aside
-
-// FORMULARIO IMAGEN
-const urlImg = document.getElementById('url-img'); // input url imagen - pestaña imagen - aside
-const imgForm = document.getElementById('img-form'); // formulario imagen - pestaña imagen -aside
-const imgFondo = document.getElementById('img-fondo'); // input fondo - pestaña imagen - aside
-const effect = document.getElementById('effect'); // select despliega opciones de efectos de imagen - pestaña imagen -aside
-const ligthEffect = document.getElementById('ligth'); // input brillo filtros - pestaña imagen
-const opacuty = document.getElementById('opacity'); // input opacidad filtros
-const contrast = document.getElementById('contrast'); // input contraste filtros
-const blur = document.getElementById('blur'); // input desenfoque filtros
-const scale = document.getElementById('scale'); // input escala de grises filtros
-const sepia = document.getElementById('sepia'); // input sepia filtros
-const hue = document.getElementById('hue'); // input hue (?) filtros
-const saturation = document.getElementById('saturation'); // input saturado filtros
-const negativ = document.getElementById('negativ'); // input negativo filtros
-const resetButton = document.getElementById('reset-button'); // boton de restablecer
-  
-
+// FALTA DECLARAR CONSTANTES DE BOTONES NINGUNO - CLARO - OSCURO
+const space = document.getElementById('space');
+const interlinear = document.getElementById('interlinear');
 
 
 // Funciondes del HEADER - para cambiar pestañas
@@ -113,7 +89,10 @@ option.addEventListener('change', () =>{
 urlImg.addEventListener('keyup', () =>{
     /* consol.log(urlImg) */
     const imagenCenter = urlImg.value;
-    imgCenterSection.style.backgroundImage=`url('${imagenCenter}')`
+    imgCenterSection.style.backgroundImage=`url('${imagenCenter}')`;
+    imgCenterSection.style.backgroundSize= 'cover';
+    imgCenterSection.style.backgroundRepeat= 'no-repeat';
+    imgCenterSection.style.backgroundPosition= 'center';
 })
 
 left.addEventListener('click', () =>{
@@ -154,6 +133,28 @@ interlinear.addEventListener('change', () =>{
     secondTextSection.style.lineHeight = interlinear.value
 })
 
+const verifyCheck = () => {
+    if(topCheckOne.checked && topCheckTwo.checked){
+        imgCenterSection.style.height = '80vh'
+    }
+    else if(topCheckOne.checked || topCheckTwo.checked){
+        imgCenterSection.style.height = '65vh'
+    }
+    else{
+        imgCenterSection.style.height = '50vh'
+    }
+}
+
+// PREGUNTAR A JOHN COMO HACER PARA QUE SE MANTENGA EL TAMAÑO DEL CONTENEDOR
+
+topCheckOne.addEventListener('click', () => {
+    firstTextSection.classList.toggle('hidden');
+    verifyCheck
+})
+topCheckTwo.addEventListener('click', () =>{
+    secondTextSection.classList.toggle('hidden');
+    verifyCheck
+})
 
 
 
