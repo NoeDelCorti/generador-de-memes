@@ -7,17 +7,16 @@
     align-items: center;
     height: auto;
     width: 100%;
-    background:var(--fondoSecundario);
-    color: var(--color-titulo-header);
+    background-color:var(--fondoSecundario);
+    color: var(--colorLetra);
     font-family: var(--generalFont);
-    /* background-color: blue; */    
+  
 }
 
 .header-container{
     display: flex;
     flex-direction: column;
-    /* padding: 10px; */
-    /* background-color: burlywood; */
+    
 }
 
 .header-title{
@@ -44,6 +43,3 @@
     font-size: 20px;
 }
 
-/* .list-nav-header{
-    background: var(--fondoPrimarioOscuro);
-} */

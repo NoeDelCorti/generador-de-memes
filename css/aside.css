@@ -97,9 +97,9 @@
 .direction-button{
     width: 15%;
     height: 4vh;
-    background-color: var(--fondoPrimarioOscuro);
+    background-color: var(--fondoSecundario);
     font-family: var(--generalFont);
-    color: var(--colorLetraOscuro);
+    color: var(--colorLetra);
     border-radius: 5px;
     border-style: none;
     font-weight: bold;   
@@ -110,11 +110,12 @@
     width: 28%;
     height: 4vh;
     font-size: 18px;
-    background-color: var(--fondoPrimarioOscuro);
+    background-color: var(--fondoSecundario);
     font-family: var(--generalFont);
-    color: var(--colorLetraOscuro);
+    color: var(--colorLetra);
     border-radius: 5px;
     border-style: none;
+    border-color: var(--colorLetra);
     /* font-weight: bold; */
 }
 

@@ -21,30 +21,28 @@ body{
 
 
 
-:root{
+/* :root{
     --fondoPrimario:#D0ECE7;
     --fondoSecundario:#ABEBC6;
     --colorLetra: #2C3E50;
     --tonalidad:#A2D9CE ;
     --generalFont:'Bebas Neue', cursive;
+} */
+ 
+.ligth-mood{
+    --fondoSecundario: #47484b;  
+    --fondoPrimario:#2b2c36;
+    --colorLetra:#F0F3F4;
+    --tonalidad:#333835;
+    --generalFont:'Bebas Neue', cursive;
 }
 
-/* body */.light-mood{
+.dark-mood{
     --fondoPrimario:#D0ECE7;
     --fondoSecundario:#ABEBC6;
     --colorLetra: #2C3E50;
     --tonalidad:#A2D9CE;
-    /* --color-body: rgb(29, 29, 34);
-    --color-titulo-header: white; */
-}
-
-/* body */.dark-mood{
-    --fondoSecundarioOscuro: #05251f;  
-    --fondoPrimarioOscuro:#148F77;
-    --colorLetraOscuro:#F0F3F4;
-    --tonalidadOscuro:#333835;
-    /* --color-body: #e4e4d8; */
-    /* --color-titulo-header: rgb(74, 243, 22); */
+    --generalFont:'Bebas Neue', cursive;
 }
 
 .ligth-mood .change-ligth-mood,

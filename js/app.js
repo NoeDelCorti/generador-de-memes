@@ -16,6 +16,8 @@ const firstTextSection = document.getElementById('first-text-section'); // campo
 const secondTextSection = document.getElementById('second-text-section'); // campo texto inferior - section
 const bottomInput = document.getElementById('bottom-input'); // input texto inferior - aside
 const downloadMemeButton = document.getElementById('download-meme-button'); // boton de descarga de meme - debajo de section - main
+const darkMood = document.getElementById('dark-mood'); // moso oscuro body
+const ligthMood = document.getElementById('ligth-mood'); // modo claro var css
 
 // ASIDE
 const asidePanel = document.getElementById('aside-panel'); // aside
@@ -131,7 +133,7 @@ interlinear.addEventListener('change', () =>{
 
 
 
-/* // MODO OSCURO - DARK MOOD ///////// preguntar a John /////
+// MODO OSCURO - DARK MOOD ///////// preguntar a John /////
  
 function changeLigthMood(){
     document.body.classList.remove('dark-mood');
@@ -142,7 +144,7 @@ function changeDarkMood(){
     document.body.classList.remove('ligth-mood');
     document.body.classList.add('dark-mood');
 }       
-//////////////////// preguntar a John ////////////// */
+//////////////////// preguntar a John //////////////
 
 // Función que saca el evento refresh de los botones dados por default
 function stopDefAction(evt) {
