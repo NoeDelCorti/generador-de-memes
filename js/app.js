@@ -35,10 +35,12 @@ const color = document.getElementById('color'); // opción de color en pestaña 
 const back = document.getElementById('back');
 const transparent = document.getElementById('transparent'); // input tipo checkbox fondo transparente
 const transparente = document.getElementById('transparente'); // label transparente
-// FALTA DECLARAR CONSTANTES DE BOTONES NINGUNO - CLARO - OSCURO
-const space = document.getElementById('space');
-const interlinear = document.getElementById('interlinear');
+const space = document.getElementById('space'); // espaciado
+const interlinear = document.getElementById('interlinear'); // interlineado
+// BOTONES DE CONTORNO
 const none = document.getElementById('none');
+const ligthButton = document.getElementById('ligth-button'); // boton contorno claro
+const darkButton = document.getElementById('dark-button'); // boton contono oscuro
 
 // PANEL IMAGEN
 const imgForm = document.getElementById('img-form'); // formulario imagen - pestaña imagen -aside
@@ -232,3 +234,22 @@ hue.addEventListener('change', filtro);
 saturation.addEventListener('change', filtro);
 negativ.addEventListener('change', filtro);
 
+// BOTONES CONTORNO
+
+darkButton.addEventListener('click', () =>{
+    firstTextSection.classList.toggle('contorno-oscuro');
+    secondTextSection.classList.toggle('contorno-oscuro');
+})
+
+ligthButton.addEventListener('click', () =>{
+    firstTextSection.classList.toggle('contorno-claro');
+    secondTextSection.classList.toggle('contorno-claro');
+})
+
+none.addEventListener('click', () =>{
+    firstTextSection.classList.remove('contorno-oscuro');
+    secondTextSection.classList.remove('contorno-oscuro');
+    firstTextSection.classList.remove('contorno-claro');
+    secondTextSection.classList.remove('contorno-claro');
+    
+})
