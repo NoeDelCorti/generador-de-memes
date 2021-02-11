@@ -6,20 +6,21 @@ const header = document.getElementById('header'); // header
 /* const imgNavHeader = document.getElementById('img-nav-header'); */ // pestaña imagen - nav header
 const textNavHeader = document.getElementById('text-nav-header'); // pestaña texto - nav header
 const darkMoodNavHeader = document.getElementById ('dark-mood-nav-header'); // pestaña modo oscuro - nav header
-const ligthMoodHeader = document.getElementById('ligth-mood-nav-header')
+const ligthMoodHeader = document.getElementById('ligth-mood-nav-header') // opción modo claro nav del header
+
 // MAIN
-const urlImg = document.getElementById('url-img'); // input url imagen - pestaña imagen - aside
 const imgCenterSection = document.getElementById('img-center-section'); // imagen meme - section
 const textForm = document.getElementById('text-form'); // formulario texto - pestaña texto - aside
-const imgForm = document.getElementById('img-form'); // formulario imagen - pestaña imagen -aside
 const firstTextSection = document.getElementById('first-text-section'); // campo texto superior - section
 const secondTextSection = document.getElementById('second-text-section'); // campo texto inferior - section
 const bottomInput = document.getElementById('bottom-input'); // input texto inferior - aside
 const downloadMemeButton = document.getElementById('download-meme-button'); // boton de descarga de meme - debajo de section - main
-const darkMood = document.getElementById('dark-mood'); // moso oscuro body
+const darkMood = document.getElementById('dark-mood'); // modo oscuro body
 const ligthMood = document.getElementById('ligth-mood'); // modo claro var css
 
 // ASIDE
+
+// PANEL TEXTO
 const asidePanel = document.getElementById('aside-panel'); // aside
 const topInput = document.getElementById('top-input'); // input texto superior pestaña texto - aside
 const topCheckOne = document.getElementById('top-check-1'); // input opción sin texto superior - aside
@@ -37,25 +38,49 @@ const transparente = document.getElementById('transparente'); // label transpare
 // FALTA DECLARAR CONSTANTES DE BOTONES NINGUNO - CLARO - OSCURO
 const space = document.getElementById('space');
 const interlinear = document.getElementById('interlinear');
+const none = document.getElementById('none');
 
+// PANEL IMAGEN
+const imgForm = document.getElementById('img-form'); // formulario imagen - pestaña imagen -aside
+const urlImg = document.getElementById('url-img'); // input url imagen - pestaña imagen - aside
+const imgFondo = document.getElementById('img-fondo'); // input tipo color para cambiar fondo de imagen panel imagen - aside
+const effect = document.getElementById('effect'); // id del select que despliega las opciones de efectos de fondo
+// FILTROS EFECTOS IMAGEN
+const opacity = document.getElementById('opacity'); // filtro de opacidad
+const light = document.getElementById('light'); // filtro brillo
+const contrast = document.getElementById('contrast'); // filtro contraste
+const blur = document.getElementById('blur'); // filtro desenfoque
+const greyScale = document.getElementById('grey-scale'); // filtro escala de grises
+const sepia = document.getElementById('sepia'); // filtro sepia
+const hue = document.getElementById('hue'); // filtro hue
+const saturation = document.getElementById('saturation'); // filtro de saturación
+const negative = document.getElementById('negativ'); // filtro negativo
+const resetButton = document.getElementById('reset-button'); // boton de restablecer filtros
+
+// -------------------------------------------------------------------------------------------------//
 
 // Funciondes del HEADER - para cambiar pestañas
 
 imgNavHeader = document.getElementById('img-nav-header');
-// Pestaña de Imagen
+
+
+// PESTAÑA IMAGEN
+
 imgNavHeader.addEventListener('click', () =>{
     imgForm.style.display='block';
     textForm.style.display='none';
 }); // Elegir opción panel de imagen
 
-// Pestaña de Texto
+
+// PESTAÑA DE TEXTO
+
 textNavHeader.addEventListener('click', () =>{
     textForm.style.display='block';
     imgForm.style.display='none';
 }); // Elegir opción panel de texto
 
 
-// Cambio de tamaño fuente
+// CAMBIO DE TAMAÑO FUENTE
 
 inputSize.addEventListener('keyup', () => {
     firstTextSection.style.fontSize = `${inputSize.value}px`
@@ -78,6 +103,8 @@ bottInput.addEventListener('keyup', () =>{
     secondTextSection.innerHTML=bottInputValue
 });
 
+// EVENTO QUE MODIFCA LA FUENTE DEL TEXTO
+
 option.addEventListener('change', () =>{
     firstTextSection.style.fontFamily = `${option.value}`;
     secondTextSection.style.fontFamily = `${option.value}`;
@@ -95,6 +122,8 @@ urlImg.addEventListener('keyup', () =>{
     imgCenterSection.style.backgroundPosition= 'center';
 })
 
+// FUNCIONALIDAD DE BOTONES TEXT-ALIGN (IZQUIERDA-CENTRAR-DERECHA)
+
 left.addEventListener('click', () =>{
     firstTextSection.style.textAlign = 'left'
     secondTextSection.style.textAlign = 'left'
@@ -110,11 +139,15 @@ right.addEventListener('click', () =>{
     secondTextSection.style.textAlign = 'right'
 }) 
 
+// OPCIÓN CAMBIO COLOR LETRAS DE TEXTO
+
 color.addEventListener('input', (e) =>{
     const inputColorValue = e.target.value
     firstTextSection.style.color = inputColorValue
     secondTextSection.style.color = inputColorValue
 })
+
+// OPCIÓN CAMBIO COLOR DE FONDO TEXTOS
 
 back.addEventListener('input', (e) =>{
     const inputBackValue = e.target.value
@@ -122,20 +155,27 @@ back.addEventListener('input', (e) =>{
     secondTextSection.style.backgroundColor = inputBackValue
 })
 
+// OPCIÓN ESPACIADO LETRAS
+
 space.addEventListener('change', (e) =>{
     const spacing = e.target.value;
     firstTextSection.style.letterSpacing = `${spacing}px`;
     secondTextSection.style.letterSpacing = `${spacing}px`;
 })
 
+// OPCIÓN DE INTERLINEADO
+
 interlinear.addEventListener('change', () =>{
     firstTextSection.style.lineHeight = interlinear.value
     secondTextSection.style.lineHeight = interlinear.value
 })
 
+
+// OPCIONES (SIN TEXTO SUPERIOR - SIN TEXTO INFERIOR)
+
 const verifyCheck = () => {
     if(topCheckOne.checked && topCheckTwo.checked){
-        imgCenterSection.style.height = '80vh'
+        imgCenterSection.style.height = '100vh'
     }
     else if(topCheckOne.checked || topCheckTwo.checked){
         imgCenterSection.style.height = '65vh'
@@ -144,8 +184,6 @@ const verifyCheck = () => {
         imgCenterSection.style.height = '50vh'
     }
 }
-
-// PREGUNTAR A JOHN COMO HACER PARA QUE SE MANTENGA EL TAMAÑO DEL CONTENEDOR
 
 topCheckOne.addEventListener('click', () => {
     firstTextSection.classList.toggle('hidden');
@@ -158,7 +196,7 @@ topCheckTwo.addEventListener('click', () =>{
 
 
 
-// MODO OSCURO - DARK MOOD ///////// preguntar a John /////
+// MODO OSCURO - DARK MOOD
  
 function changeLigthMood(){
     document.body.classList.remove('dark-mood');
@@ -169,9 +207,28 @@ function changeDarkMood(){
     document.body.classList.remove('ligth-mood');
     document.body.classList.add('dark-mood');
 }       
-//////////////////// preguntar a John //////////////
 
-// Función que saca el evento refresh de los botones dados por default
+
+// FUNCIÓN PARA QUITAR EL EVENTO REFRESH QUE LOS BOTONES TRAEN POR DEFAULT
+
 function stopDefAction(evt) {
   evt.preventDefault();
 }
+
+// FUNCIONALIDAD DE LOS FILTRO - RANGOS
+
+const filtro = () => {
+    imgCenterSection.style.filter = `brightness(${light.value}) opacity(${opacity.value}) contrast(${contrast.value}%) blur(${blur.value}px) grayscale(${greyScale.value}%) sepia(${sepia.value}%) hue-rotate(${hue.value}deg) saturate(${saturation.value}%) invert(${negativ.value})` 
+};
+
+
+light.addEventListener('change', filtro);
+opacity.addEventListener('change', filtro);
+contrast.addEventListener('change', filtro);
+blur.addEventListener('change', filtro);
+greyScale.addEventListener('change', filtro);
+sepia.addEventListener('change', filtro);
+hue.addEventListener('change', filtro);
+saturation.addEventListener('change', filtro);
+negativ.addEventListener('change', filtro);
+
