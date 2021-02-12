@@ -265,14 +265,14 @@ effect.addEventListener('change', () =>{
 })
 
 // FUNCIÓN PARA EL RESPONSIVE PANELES
-const panelResponsive = () =>{
+/* const panelResponsive = () =>{
     if(window.screen.width <= 700){
        textForm.classList.add('panel') 
     } else{ 
         imgForm.classList.remove('panel')
      }
     
-};
+}; */
 /* 
 asidePanel.addEventListener('click', () => {
     asidePanel.style.visibility('visible');

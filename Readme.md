@@ -4,7 +4,7 @@
 
 <br>
 
-### ¿Te gustaría ver como quedó? podes verlo en este [enlace]() o también podes hacerlo desde acá [aca](https://unruffled-raman-9be29e.netlify.app).
+### ¿Te gustaría ver como quedó? podes verlo en este [enlace](https://noedelcorti.github.io/generador-de-memes/) o también podes hacerlo desde acá [aca](https://unruffled-raman-9be29e.netlify.app).
 
 
 <br>
@@ -29,7 +29,7 @@
 
 ![imagen](./img/img-generador-modo-claro-imagen.png)
 ![imagen](./img/img-generador-modo-claro-texto.png)
-![imagen](./img/img-generador-modo-oscuro-imagen.png)
+![imagen](./img/img-generador-moo-oscuro-imagen.png)
 ![imagen](./img/img-generador-modo-oscuro-texto.png)
 
 <br>
