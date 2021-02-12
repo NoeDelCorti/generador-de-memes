@@ -10,7 +10,7 @@
     justify-content: center;
     flex-direction: column;
     align-self: center;
-    margin-bottom: 1.25rem;
+    /* margin-bottom: 1.25rem; */
     border: 2px solid var(--colorLetra);
 }
 
@@ -19,10 +19,9 @@
 .top-input{
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     flex-direction: column;
     width: 100%;
-    height: 15vh;
+    height: 25%;
     background-color: white;
     /* border: 1px solid white; */ 
     color: black;
@@ -33,7 +32,7 @@
 .img-center-section{
     display: flex;
     width:100%;
-    height: 50vh;
+    height: 100%;
     /* background-color:black; */
     /* border: 2px solid var(--colorLetra); */
     
@@ -45,20 +44,20 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    height: 15vh;
+    height: 25%;
     background-color: white;
     color: black;
     align-self: flex-end;
     
 }
 
-.center-text{
+/* .center-text{
     width: 100%;
     height: auto;
     padding: 20%;
     background-color: #ffffff;
 }
-
+ */
 .hidden{
     display: none;
     

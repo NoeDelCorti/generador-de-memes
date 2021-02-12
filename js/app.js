@@ -177,7 +177,7 @@ interlinear.addEventListener('change', () =>{
 
 const verifyCheck = () => {
     if(topCheckOne.checked && topCheckTwo.checked){
-        imgCenterSection.style.height = '100vh'
+        imgCenterSection.style.backgroundImage = '100vh'
     }
     else if(topCheckOne.checked || topCheckTwo.checked){
         imgCenterSection.style.height = '65vh'
@@ -239,17 +239,28 @@ negativ.addEventListener('change', filtro);
 darkButton.addEventListener('click', () =>{
     firstTextSection.classList.toggle('contorno-oscuro');
     secondTextSection.classList.toggle('contorno-oscuro');
-})
+});
 
 ligthButton.addEventListener('click', () =>{
     firstTextSection.classList.toggle('contorno-claro');
     secondTextSection.classList.toggle('contorno-claro');
-})
+});
 
 none.addEventListener('click', () =>{
     firstTextSection.classList.remove('contorno-oscuro');
     secondTextSection.classList.remove('contorno-oscuro');
     firstTextSection.classList.remove('contorno-claro');
-    secondTextSection.classList.remove('contorno-claro');
-    
+    secondTextSection.classList.remove('contorno-claro');  
+});
+
+// EFECTOS IMAGEN
+
+imgFondo.addEventListener('input', (e) =>{
+    const backColor = e.target.value;
+    imgCenterSection.style.backgroundColor = backColor;
 })
+
+effect.addEventListener('change', () =>{
+    imgCenterSection.style.backgroundBlendMode = effect.value;
+})
+

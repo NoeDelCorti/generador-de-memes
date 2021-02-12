@@ -19,13 +19,17 @@
 .download-button-text{
     background-color: rgb(70, 158, 70);
     border-radius: 3px;
-    padding: 8px;
-    width: 10%;
+    padding-left: 3px;
+    padding-right: 3px;
+    width: auto;
+    height: 5vh;
+    justify-content: center;
     color: #fff;
     border: none;
     font-size: 10px;
     list-style: none;
     border: 1px solid rgb(8, 46, 8);
+    margin-top: 1.25rem;
     
 }
 

@@ -15,7 +15,11 @@
 
 .header-container{
     display: flex;
+    width: auto;
     flex-direction: column;
+    justify-content: center ;
+    align-content: center;
+    /* background-color: lawngreen; */
     
 }
 
@@ -38,8 +42,8 @@
 
 .list-nav-header{
     display: flex;
-    justify-content: space-around;
-    width: 400px;
-    font-size: 20px;
+    /* justify-content: space-around; */
+    width: /* 400px; */ 50vh;
+    font-size: 1.25rem;
 }
 
