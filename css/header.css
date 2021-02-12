@@ -50,6 +50,8 @@
     border: 1px solid var(--colorLetra);
     padding:5px;  
     border-radius: 5px;
-    cursor: pointer;
+    cursor: pointer;  
 }
+
+
 

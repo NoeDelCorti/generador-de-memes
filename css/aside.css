@@ -103,7 +103,8 @@
     color: var(--colorLetra);
     border-radius: 5px;
     border-style: none;
-    font-weight: bold;   
+    font-weight: bold;
+    border: 1px solid var(--colorLetra);   
 }
 
 
@@ -118,6 +119,7 @@
     border-style: none;
     border-color: var(--colorLetra);
     /* font-weight: bold; */
+    border: 1px solid var(--colorLetra);
 
 }
 
