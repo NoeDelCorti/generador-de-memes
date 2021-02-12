@@ -63,6 +63,7 @@
 .little-box{
     display: flex;
     flex-direction: column;
+    
 }
 
 .sub-text{
@@ -126,4 +127,11 @@
 
 .contorno-claro{
     -webkit-text-stroke: 1px rgb(255, 255, 255);
+}
+
+
+@media (max-width:1024px) and (min-width:300px){
+    .aside-panel{
+        visibility: hidden;
+    }
 }
