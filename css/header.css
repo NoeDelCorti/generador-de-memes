@@ -36,8 +36,7 @@
     flex-direction: row;
     list-style: none;
     justify-content: space-around;
-    padding:5px;
-    
+    padding:5px;   
 }
 
 .list-nav-header{
@@ -45,5 +44,12 @@
     /* justify-content: space-around; */
     width: /* 400px; */ 50vh;
     font-size: 1.25rem;
+}
+
+.item{
+    border: 1px solid var(--colorLetra);
+    padding:5px;  
+    border-radius: 5px;
+    cursor: pointer;
 }
 
