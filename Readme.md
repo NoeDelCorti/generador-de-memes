@@ -20,7 +20,7 @@
 
 <br>
 
-## Este proyecto no precisa de la instalación de ninguna dependencia, programa, app o simil al momento, la idea es que puedas generar tu propio meme desde cuaquier dispositivo, ya tiene un diseño responsivo.
+## Este proyecto no precisa de la instalación de ninguna dependencia, programa, app o simil al momento, la idea es que puedas generar tu propio meme desde cuaquier dispositivo, ya que tiene un diseño responsivo.
 
 
 ---
