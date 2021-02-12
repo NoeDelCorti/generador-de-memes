@@ -118,6 +118,7 @@
     border-style: none;
     border-color: var(--colorLetra);
     /* font-weight: bold; */
+
 }
 
 
@@ -130,8 +131,15 @@
 }
 
 
-@media (max-width:1024px) and (min-width:300px){
+@media (max-width:800px){
     .aside-panel{
-        visibility: hidden;
+        display: none;
+    }
+
+    .panel{
+        display: block;
+        width: 100%;
+        z-index: 3;
     }
 }
+

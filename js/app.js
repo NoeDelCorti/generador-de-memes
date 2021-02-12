@@ -264,3 +264,19 @@ effect.addEventListener('change', () =>{
     imgCenterSection.style.backgroundBlendMode = effect.value;
 })
 
+// FUNCIÓN PARA EL RESPONSIVE PANELES
+const panelResponsive = () =>{
+    if(window.screen.width <= 700){
+       textForm.classList.add('panel') 
+    } else{ 
+        imgForm.classList.remove('panel')
+     }
+    
+};
+/* 
+asidePanel.addEventListener('click', () => {
+    asidePanel.style.visibility('visible');
+    panelResponsive
+
+ });
+ */
