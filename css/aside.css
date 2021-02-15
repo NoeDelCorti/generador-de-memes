@@ -7,25 +7,24 @@
     justify-content: center;
     padding-left: 10px;
     background:var(--tonalidad);
-    /* background:var(--tonalidadOscuro); */
     color:var(--colorLetra);
     font-family: var(--generalFont); 
     position: fixed;
     right: 0;
     top: 0;
-    height: 100vh;
+    height: 100%;
     width: 20%;  
     padding: 2%;  
     padding-top: 2%;
+    /* padding-bottom: 2%; */
     font-size: 14px;
-    
 }
+
 
 .aside-text-container{
     display: flex;
     align-content: center;
     flex-direction: column;
-
 }
 
 .aside-title{
@@ -143,7 +142,7 @@
 }
 
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1000px) and (min-width:700px){
     .aside-panel {
        display: block;
     }
@@ -153,7 +152,7 @@
 }
 
 
-@media (max-width:800px){
+@media (max-width:800px) and (min-width:300px){
     .aside-panel{
         display: none;
     }
