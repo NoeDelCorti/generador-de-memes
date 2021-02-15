@@ -9,6 +9,7 @@ const darkMoodNavHeader = document.getElementById ('dark-mood-nav-header'); // p
 const ligthMoodHeader = document.getElementById('ligth-mood-nav-header') // opción modo claro nav del header
 
 // MAIN
+const section = document.getElementById('section'); // sección imagen
 const imgCenterSection = document.getElementById('img-center-section'); // imagen meme - section
 const textForm = document.getElementById('text-form'); // formulario texto - pestaña texto - aside
 const firstTextSection = document.getElementById('first-text-section'); // campo texto superior - section
@@ -196,6 +197,13 @@ topCheckTwo.addEventListener('click', () =>{
     verifyCheck
 })
 
+/* const verifyBack = () => {
+    if 
+} */
+
+
+
+
 
 
 // MODO OSCURO - DARK MOOD
@@ -280,3 +288,17 @@ asidePanel.addEventListener('click', () => {
 
  });
  */
+
+// BOTÓN DE DESCARGA
+
+downloadMemeButton.addEventListener('click', () =>{
+    decargarImagen()
+});
+
+
+const decargarImagen = () =>{
+domtoimage.toBlob(section)
+    .then(function (blob) {
+        saveAs(blob, 'my-node.png');
+    })
+}
