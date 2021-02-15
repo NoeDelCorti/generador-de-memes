@@ -11,7 +11,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     height: 100vh;
-    width: 100%; /* CHEQUEAR CON RESPONSIVE */
+    width: 100%; 
     background: var(--fondoPrimario);
 
 }

@@ -99,7 +99,9 @@ inputSize.addEventListener('click', () => {
 topInput.addEventListener('keyup', () =>{
     const topInputValue = topInput.value
     firstTextSection.innerHTML=topInputValue;
+    
 }); 
+
 
 bottInput.addEventListener('keyup', () =>{
     const bottInputValue = bottInput.value
