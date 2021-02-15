@@ -67,183 +67,183 @@
         <!-- Comienzo de aside -->
     
         <aside id="aside-panel" class="aside-panel">
-
+            <button type="button" id="close-btn" class="close-btn"><i class="fas fa-times" aria-hidden="true"></i></button>   
         <!-- Comienzo Formulario Texto -->
 
-        <div class="aside-text-container">
+            <div class="aside-text-container">
         
-            <form id="text-form" class="text-form panel" hidden="">
-            <h2 class="aside-title">TEXTO</h2>
-                <div class="little-box">
-                    <label for="top-input">Superior</label>
-                </div>
-                <div class="little-box">
-                    <input type="text" id="top-input" maxlength="60" size="10"class="input-littlebox" value="TOP TEXT" placeholder="TOP TEXT"> 
-                </div>
-                <div class="little-box">
-                    <span>
-                        <input id="top-check-1" type="checkbox">
-                        <label id="sub-text" for="top-check-1" class="sub-text">Sin texto superior</label>
-                    </span>        
-                </div>
-                <div class="little-box">
-                    <label for="bott">Inferior</label>
-                </div>
-                <div class="little-box">
-                    <input type="text" id="bott-input" maxlength="60" size="10" class="input-littlebox" value="BOTTOM TEXT" placeholder="BOTTOM TEXT">
-                </div>
-                <div class="little-box check-class" >
-                    <span>
-                        <input id="top-check-2" type="checkbox">
-                        <label id="sub-text" for="top-check-2" class="sub-text">Sin texto inferior</label>
-                    </span>
-                </div>
-                <div class="little-box">
-                    <label for="option">Fuente</label>
-                </div>
-                <div class="little-box">
-                    <select name="option" id="option" class="options">
-                        <option value="Franklin Gothic Medium" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Franklin Gothic Medium</option>
-                        <option value="Segoe UI" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Segoe UI</option>
-                        <option value="verdana" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Verdana</option>
-                        <option value="Trebuchet" style="font-family:Arial, Helvetica, sans-serif">Arial</option>
-                        <option value="impact" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">Impact</option>
-                        <option value="Cambria" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Gill Sans</option>
-                    </select>
-                </div>
-                <div class="font-button direction">
-                    <input id="input-size" class="font-size" type="number" value="40" min="0" max="50">
-                    <button id="left" class="direction-button" onclick="stopDefAction(event);">I</button>
-                    <button id="center" class="direction-button" onclick="stopDefAction(event);">C</button>
-                    <button id="right" class="direction-button" onclick="stopDefAction(event);">D</button>
-                </div>
-                
-                <div class="font-button <!-- little-button -->">
-                    <label for="color" class="sub-text">Color</label>
-                        <input type="color" id="color" class="color-options" value="#000000" placeholder="#000000"> <!-- /// preguntar cómo visualizar el placeholder? /// -->
-                    <label for="back" class="sub-text"> Fondo</label>
-                        <input type="color" id="back" class="color-options" value="#ffffff" placeholder="#ffffff"> <!-- /// preguntar cómo visualizar el placeholder? /// -->
-                        <br>
-                </div>
-                <div class="little-box sub-text">
-                    <span>
-                        <input type="checkbox" id="transparent">
-                        <label id="transparente" for="transparente" class="sub-text">Fondo transparente</label>
-                    </span>
-                </div>
-                <div class="little-box">
-                    <label>Contorno</label>
-                </div>
-                <div class="button-contorno">
-                    <button class="background-button" id="none" onclick="stopDefAction(event);">Ninguno</button>
-                    <button class="background-button" id="ligth-button" onclick="stopDefAction(event);">Claro</button>
-                    <button class="background-button" id="dark-button"  onclick="stopDefAction(event);">Oscuro</button>
-                </div>
-                <div class="little-box">
-                    <label for="space" >Espaciado</label>
-                    <input type="number" id="space" class="little-box" value="17">
-                </div>
-                <div class="little-box">
-                    <label for="interlinear">Interlineado</label>
-                    <select name="interlinear" id="interlinear" class="little-box">
-                        <option value="0.8">0.8</option>
-                        <option value="1">1</option>
-                        <option value="1.2">1.2</option>
-                        <option value="1.5">1.5</option>
-                        <option value="2">2</option>
-                    </select>
-                </div>
-            </form>
-        </div>
+                <form id="text-form" class="text-form panel" hidden="">
+                <h2 class="aside-title">TEXTO</h2>
+                    <div class="little-box">
+                        <label for="top-input">Superior</label>
+                    </div>
+                    <div class="little-box">
+                        <input type="text" id="top-input" maxlength="60" size="10"class="input-littlebox" value="TOP TEXT" placeholder="TOP TEXT"> 
+                    </div>
+                    <div class="little-box">
+                        <span>
+                            <input id="top-check-1" type="checkbox">
+                            <label id="sub-text" for="top-check-1" class="sub-text">Sin texto superior</label>
+                        </span>        
+                    </div>
+                    <div class="little-box">
+                        <label for="bott">Inferior</label>
+                    </div>
+                    <div class="little-box">
+                        <input type="text" id="bott-input" maxlength="60" size="10" class="input-littlebox" value="BOTTOM TEXT" placeholder="BOTTOM TEXT">
+                    </div>
+                    <div class="little-box check-class" >
+                        <span>
+                            <input id="top-check-2" type="checkbox">
+                            <label id="sub-text" for="top-check-2" class="sub-text">Sin texto inferior</label>
+                        </span>
+                    </div>
+                    <div class="little-box">
+                        <label for="option">Fuente</label>
+                    </div>
+                    <div class="little-box">
+                        <select name="option" id="option" class="options">
+                            <option value="Franklin Gothic Medium" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Franklin Gothic Medium</option>
+                            <option value="Segoe UI" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Segoe UI</option>
+                            <option value="verdana" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Verdana</option>
+                            <option value="Trebuchet" style="font-family:Arial, Helvetica, sans-serif">Arial</option>
+                            <option value="impact" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">Impact</option>
+                            <option value="Cambria" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Gill Sans</option>
+                        </select>
+                    </div>
+                    <div class="font-button direction">
+                        <input id="input-size" class="font-size" type="number" value="40" min="0" max="50">
+                        <button id="left" class="direction-button" onclick="stopDefAction(event);">I</button>
+                        <button id="center" class="direction-button" onclick="stopDefAction(event);">C</button>
+                        <button id="right" class="direction-button" onclick="stopDefAction(event);">D</button>
+                    </div>
+                    
+                    <div class="font-button <!-- little-button -->">
+                        <label for="color" class="sub-text">Color</label>
+                            <input type="color" id="color" class="color-options" value="#000000" placeholder="#000000"> <!-- /// preguntar cómo visualizar el placeholder? /// -->
+                        <label for="back" class="sub-text"> Fondo</label>
+                            <input type="color" id="back" class="color-options" value="#ffffff" placeholder="#ffffff"> <!-- /// preguntar cómo visualizar el placeholder? /// -->
+                            <br>
+                    </div>
+                    <div class="little-box sub-text">
+                        <span>
+                            <input type="checkbox" id="transparent">
+                            <label id="transparente" for="transparente" class="sub-text">Fondo transparente</label>
+                        </span>
+                    </div>
+                    <div class="little-box">
+                        <label>Contorno</label>
+                    </div>
+                    <div class="button-contorno">
+                        <button class="background-button" id="none" onclick="stopDefAction(event);">Ninguno</button>
+                        <button class="background-button" id="ligth-button" onclick="stopDefAction(event);">Claro</button>
+                        <button class="background-button" id="dark-button"  onclick="stopDefAction(event);">Oscuro</button>
+                    </div>
+                    <div class="little-box">
+                        <label for="space" >Espaciado</label>
+                        <input type="number" id="space" class="little-box" value="17">
+                    </div>
+                    <div class="little-box">
+                        <label for="interlinear">Interlineado</label>
+                        <select name="interlinear" id="interlinear" class="little-box">
+                            <option value="0.8">0.8</option>
+                            <option value="1">1</option>
+                            <option value="1.2">1.2</option>
+                            <option value="1.5">1.5</option>
+                            <option value="2">2</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
 
         <!-- Fin Formulario Texto -->
 
         <!-- Comienzo Formulario Imagen -->
 
-        <div class="aside-img-container">
-            <form id="img-form" class="img-form panel">
-                <!-- <div class="little-box"> -->
-                    <h2 class="aside-title-img">IMAGEN</h2>
-                <!-- </div> -->
+            <div class="aside-img-container">
+                <form id="img-form" class="img-form panel">
+                    <!-- <div class="little-box"> -->
+                        <h2 class="aside-title-img">IMAGEN</h2>
+                    <!-- </div> -->
 
-                <div class="little-box">
-                    <label for="url-img" class="sub-text-img">URL</label>
-                    <input type="url" id="url-img" class="input-littlebox" value="">
-                </div>
-            <!-- <input type="file" > -->
-                <div class="little-box">
-                        <label for="img-fondo" class="sub-text-img">Fondo</label>
-                        <input type="color" id="img-fondo" class="input-littlebox">
-                </div>
-                <div class="little-box">
-                    <label for="effect" class="sub-text-img">Efecto</label>
-                </div>
+                    <div class="little-box">
+                        <label for="url-img" class="sub-text-img">URL</label>
+                        <input type="url" id="url-img" class="input-littlebox" value="">
+                    </div>
+                <!-- <input type="file" > -->
+                    <div class="little-box">
+                            <label for="img-fondo" class="sub-text-img">Fondo</label>
+                            <input type="color" id="img-fondo" class="input-littlebox">
+                    </div>
+                    <div class="little-box">
+                        <label for="effect" class="sub-text-img">Efecto</label>
+                    </div>
 
-                <div class="little-box">
-                    <select name="effect" id="effect" class="options">
-                        <option value="#">Ninguno</option>
-                        <option value="lighten">Aclarar</option>
-                        <option value="darken">Oscurecer</option>
-                        <option value="difference">Diferencia</option>
-                        <option value="luminosity">Luminosidad</option>
-                        <option value="multiply">Multiplicar</option>                    
-                    </select>
-                </div>
-                
-                <div class="little-box">
-                <h3>Filtros</h3>
+                    <div class="little-box">
+                        <select name="effect" id="effect" class="options">
+                            <option value="#">Ninguno</option>
+                            <option value="lighten">Aclarar</option>
+                            <option value="darken">Oscurecer</option>
+                            <option value="difference">Diferencia</option>
+                            <option value="luminosity">Luminosidad</option>
+                            <option value="multiply">Multiplicar</option>                    
+                        </select>
+                    </div>
                     
-                    <label for="light" class="sub-text-img">Brillo</label>
-                    <input type="range" id="light" class="range" min="0" max="1" step=".1" value="1">
-                </div>
-                
-                <div class="little-box">
-                    <label for="opacity">Opacidad</label>
-                    <input type="range" id="opacity" class="range" min="0" max="1" step=".1" value="1">
-                </div>
+                    <div class="little-box">
+                    <h3>Filtros</h3>
+                        
+                        <label for="light" class="sub-text-img">Brillo</label>
+                        <input type="range" id="light" class="range" min="0" max="1" step=".1" value="1">
+                    </div>
+                    
+                    <div class="little-box">
+                        <label for="opacity">Opacidad</label>
+                        <input type="range" id="opacity" class="range" min="0" max="1" step=".1" value="1">
+                    </div>
 
-                <div class="little-box">    
-                <label for="contrast">Contraste</label>
-                    <input type="range" id="contrast" class="range" min="100" max="1000" step="1" value="100">
-                </div>
+                    <div class="little-box">    
+                    <label for="contrast">Contraste</label>
+                        <input type="range" id="contrast" class="range" min="100" max="1000" step="1" value="100">
+                    </div>
 
-                <div class="little-box">
-                    <label for="blur">Desenfoque</label>
-                    <input type="range" id="blur" class="range" min="0" max="10" step=".1" value="0">
-                </div> 
-                
-                <div class="little-box">
-                    <label for="grey-scale">Escala de grises</label>
-                    <input type="range" id="grey-scale" class="range" min="0" max="100" step="1" value="0"> 
-                </div>
+                    <div class="little-box">
+                        <label for="blur">Desenfoque</label>
+                        <input type="range" id="blur" class="range" min="0" max="10" step=".1" value="0">
+                    </div> 
+                    
+                    <div class="little-box">
+                        <label for="grey-scale">Escala de grises</label>
+                        <input type="range" id="grey-scale" class="range" min="0" max="100" step="1" value="0"> 
+                    </div>
 
-                <div class="little-box">
-                    <label for="sepia">Sepia</label>
-                    <input type="range" id="sepia" class="range" min="0" max="100" step="1" value="0">
-                </div>
+                    <div class="little-box">
+                        <label for="sepia">Sepia</label>
+                        <input type="range" id="sepia" class="range" min="0" max="100" step="1" value="0">
+                    </div>
 
-                <div class="little-box">
-                    <label for="hue">Hue</label>
-                    <input type="range" id="hue" class="range" min="0" max="359" step="1" value="0">
-                </div>
+                    <div class="little-box">
+                        <label for="hue">Hue</label>
+                        <input type="range" id="hue" class="range" min="0" max="359" step="1" value="0">
+                    </div>
 
-                <div class="little-box">
-                    <label for="saturation">Saturado</label>
-                    <input type="range" id="saturation" class="range" min="100" max="1000" step="10" value="100">
-                </div>
+                    <div class="little-box">
+                        <label for="saturation">Saturado</label>
+                        <input type="range" id="saturation" class="range" min="100" max="1000" step="10" value="100">
+                    </div>
 
-                <div class="little-box">
-                    <label for="negativ">Negativo</label>
-                    <input type="range" id="negativ" class="range" min="0" max="1" step=".1" value="0">
-                </div>
+                    <div class="little-box">
+                        <label for="negativ">Negativo</label>
+                        <input type="range" id="negativ" class="range" min="0" max="1" step=".1" value="0">
+                    </div>
 
-                <div class="little-box">
-                    <button id="reset-button" class="reset-button">RESTABLECER</button>
-                </div>
-            </form>
-        </div>
+                    <div class="little-box">
+                        <button id="reset-button" class="reset-button">RESTABLECER</button>
+                    </div>
+                </form>
+            </div>
         
-    </aside>
+        </aside>
     <!-- Fin de aside -->
 
     </main>

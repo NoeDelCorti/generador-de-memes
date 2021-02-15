@@ -67,11 +67,16 @@
     }
 }
 
-@media (max-width:800px) and (min-width:300px){
+@media (max-width:800px){
     .section{
         display: flex;
         justify-content: center;
         align-self: center;
         width: 80%;
     }
+
+    .top-input, .bottom-input{
+        font-size: smaller;
+    }
+    
 }

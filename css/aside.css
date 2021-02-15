@@ -132,13 +132,33 @@
     -webkit-text-stroke: 1px rgb(255, 255, 255);
 }
 
+.close-btn{
+    display: flex;
+    background-color: var(--fondoSecundario);
+    font-family: var(--generalFont);
+    color: var(--colorLetra);
+    border-radius: 2px;
+    border-style: none;
+    border: 1px solid var(--colorLetra);
+}
+
+
+@media screen and (min-width: 1300px) {
+    .aside-panel {
+       display: block;
+    }
+    #close-btn {
+        display: none;
+    }
+}
+
 
 @media (max-width:800px){
     .aside-panel{
         display: none;
     }
 
-    .panel{
+    .responsive{
         display: block;
         width: 100%;
         z-index: 3;

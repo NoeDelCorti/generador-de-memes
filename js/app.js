@@ -18,6 +18,7 @@ const bottomInput = document.getElementById('bottom-input'); // input texto infe
 const downloadMemeButton = document.getElementById('download-meme-button'); // boton de descarga de meme - debajo de section - main
 const darkMood = document.getElementById('dark-mood'); // modo oscuro body
 const ligthMood = document.getElementById('ligth-mood'); // modo claro var css
+const closeBtn = document.getElementById('close-btn'); // boton X de cerrar panel en responsive 
 
 // ASIDE
 
@@ -58,8 +59,7 @@ const sepia = document.getElementById('sepia'); // filtro sepia
 const hue = document.getElementById('hue'); // filtro hue
 const saturation = document.getElementById('saturation'); // filtro de saturación
 const negative = document.getElementById('negativ'); // filtro negativo
-const resetButton = document.getElementById('reset-button'); // boton de restablecer filtros
-
+const resetButton = document.getElementById('reset-button'); // boton de restablecer filtro
 // -------------------------------------------------------------------------------------------------//
 
 // Funciondes del HEADER - para cambiar pestañas
@@ -70,16 +70,20 @@ imgNavHeader = document.getElementById('img-nav-header');
 // PESTAÑA IMAGEN
 
 imgNavHeader.addEventListener('click', () =>{
+    asidePanel.style.display='block';
     imgForm.style.display='block';
     textForm.style.display='none';
+    panelResponsive();
 }); // Elegir opción panel de imagen
 
 
 // PESTAÑA DE TEXTO
 
 textNavHeader.addEventListener('click', () =>{
+    asidePanel.style.display='block';
     textForm.style.display='block';
     imgForm.style.display='none';
+    panelResponsive()
 }); // Elegir opción panel de texto
 
 
@@ -199,14 +203,6 @@ topCheckTwo.addEventListener('click', () =>{
     verifyCheck
 })
 
-/* const verifyBack = () => {
-    if 
-} */
-
-
-
-
-
 
 // MODO OSCURO - DARK MOOD
  
@@ -275,21 +271,21 @@ effect.addEventListener('change', () =>{
 })
 
 // FUNCIÓN PARA EL RESPONSIVE PANELES
-/* const panelResponsive = () =>{
-    if(window.screen.width <= 700){
-       textForm.classList.add('panel') 
+const panelResponsive = () =>{
+    if (window.screen.width <= 800){
+       asidePanel.classList.add('responsive') 
     } else{ 
-        imgForm.classList.remove('panel')
+        asidePanel.classList.remove('responsive')
      }
     
-}; */
-/* 
-asidePanel.addEventListener('click', () => {
-    asidePanel.style.visibility('visible');
-    panelResponsive
+};
 
- });
- */
+
+closeBtn.addEventListener('click', () => {
+    asidePanel.style.display = 'none';
+});
+
+
 
 // BOTÓN DE DESCARGA
 
