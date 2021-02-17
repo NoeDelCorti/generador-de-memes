@@ -36,7 +36,7 @@ const right = document.getElementById('right'); // boton alinear a la derecha pa
 const color = document.getElementById('color'); // opción de color en pestaña texto - aside
 const back = document.getElementById('back');
 const transparent = document.getElementById('transparent'); // input tipo checkbox fondo transparente
-const transparente = document.getElementById('transparente'); // label transparente
+/* const transparente = document.getElementById('transparente'); // label transparente */
 const space = document.getElementById('space'); // espaciado
 const interlinear = document.getElementById('interlinear'); // interlineado
 // BOTONES DE CONTORNO
@@ -270,7 +270,24 @@ effect.addEventListener('change', () =>{
     imgCenterSection.style.backgroundBlendMode = effect.value;
 })
 
+// BOTÓN DE RESTABLECER 
+
+resetButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    light.value = 1;
+    opacity.value = 1;
+    contrast.value = 100;
+    blur.value = 0;
+    greyScale.value = 0;
+    sepia.value = 0;
+    hue.value = 0;
+    saturation.value = 100;
+    negative.value = 0;
+    filtro();
+});
+
 // FUNCIÓN PARA EL RESPONSIVE PANELES
+
 const panelResponsive = () =>{
     if (window.screen.width <= 800){
        asidePanel.classList.add('responsive') 
