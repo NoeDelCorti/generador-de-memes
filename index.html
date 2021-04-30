@@ -60,15 +60,18 @@
 
         <!-- Fin de section -->
 
-        <!-- Boton descarga -->
+        <!-- Boton descarga inicio -->
             
             <button id="download-meme-button" class="download-button-text"><i class="fas fa-download"></i><p>Descarga tu meme</p></button>
+
+        <!-- Boton descarga fin -->    
         
         <!-- Comienzo de aside -->
     
         <aside id="aside-panel" class="aside-panel">
             <button type="button" id="close-btn" class="close-btn"><i class="fas fa-times" aria-hidden="true"></i></button>   
-        <!-- Comienzo Formulario Texto -->
+        
+            <!-- Comienzo Formulario Texto -->
 
             <div class="aside-text-container">
         
@@ -120,10 +123,10 @@
                     
                     <div class="font-button <!-- little-button -->">
                         <label for="color" class="sub-text">Color</label>
-                            <input type="color" id="color" class="color-options" value="#000000" placeholder="#000000"> <!-- /// preguntar cómo visualizar el placeholder? /// -->
+                            <input type="color" id="color" class="color-options" value="#000000" placeholder="#000000">
                         <label for="back" class="sub-text"> Fondo</label>
-                            <input type="color" id="back" class="color-options" value="#ffffff" placeholder="#ffffff"> <!-- /// preguntar cómo visualizar el placeholder? /// -->
-                            <br>
+                            <input type="color" id="back" class="color-options" value="#ffffff" placeholder="#ffffff"> 
+                        <br>
                     </div>
                     <div class="little-box sub-text">
                         <span>
@@ -162,15 +165,14 @@
 
             <div class="aside-img-container">
                 <form id="img-form" class="img-form panel">
-                    <!-- <div class="little-box"> -->
-                        <h2 class="aside-title-img">IMAGEN</h2>
-                    <!-- </div> -->
 
+                        <h2 class="aside-title-img">IMAGEN</h2>
+                    
                     <div class="little-box">
                         <label for="url-img" class="sub-text-img">URL</label>
-                        <input type="url" id="url-img" class="input-littlebox" value="">
+                        <input type="url" id="url-img" class="input-littlebox url-img-mobile" value="">
                     </div>
-                <!-- <input type="file" > -->
+                
                     <div class="little-box">
                             <label for="img-fondo" class="sub-text-img">Fondo</label>
                             <input type="color" id="img-fondo" class="input-littlebox">
