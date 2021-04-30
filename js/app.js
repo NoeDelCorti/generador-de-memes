@@ -3,7 +3,7 @@
 
 // HEADER
 const header = document.getElementById('header'); // header
-const imgNavHeader = document.getElementById('img-nav-header'); // pestaña imagen - nav header
+/* const imgNavHeader = document.getElementById('img-nav-header'); */ // pestaña imagen - nav header
 const textNavHeader = document.getElementById('text-nav-header'); // pestaña texto - nav header
 const darkMoodNavHeader = document.getElementById ('dark-mood-nav-header'); // pestaña modo oscuro - nav header
 const ligthMoodHeader = document.getElementById('ligth-mood-nav-header') // opción modo claro nav del header
@@ -47,7 +47,7 @@ const darkButton = document.getElementById('dark-button'); // boton contono oscu
 // PANEL IMAGEN
 const imgForm = document.getElementById('img-form'); // formulario imagen - pestaña imagen -aside
 const urlImg = document.getElementById('url-img'); // input url imagen - pestaña imagen - aside
-const urlImgMobile = document.getElementsByClassName('url-img-mobile'); // input utl imagen mobile - para cargar la img 
+const urlImgMobile = document.getElementsByClassName('ulr-img-mobile')[0];
 const imgFondo = document.getElementById('img-fondo'); // input tipo color para cambiar fondo de imagen panel imagen - aside
 const effect = document.getElementById('effect'); // id del select que despliega las opciones de efectos de fondo
 // FILTROS EFECTOS IMAGEN
@@ -64,6 +64,9 @@ const resetButton = document.getElementById('reset-button'); // boton de restabl
 // -------------------------------------------------------------------------------------------------//
 
 // Funciondes del HEADER - para cambiar pestañas
+
+imgNavHeader = document.getElementById('img-nav-header');
+
 
 // PESTAÑA IMAGEN
 
@@ -121,6 +124,7 @@ option.addEventListener('change', () =>{
 // EVENTOS PARA FORMULARIO IMAGEN - poner una imagen url
 
 urlImg.addEventListener('keyup', () =>{
+    /* consol.log(urlImg) */
     const imagenCenter = urlImg.value;
     imgCenterSection.style.backgroundImage=`url('${imagenCenter}')`;
     imgCenterSection.style.backgroundSize= 'cover';
@@ -128,26 +132,9 @@ urlImg.addEventListener('keyup', () =>{
     imgCenterSection.style.backgroundPosition= 'center';
 })
 
-urlImg.addEventListener('change', () =>{
-    if (window.screen.width <= 800){
-        asidePanel.classList.add('responsive') 
-     } else{ 
-         asidePanel.classList.remove('responsive')
-      };
+urlImgMobile.addEventListener('blur', () =>{
+    /* consol.log(urlImg) */
     const imagenCenter = urlImg.value;
-    imgCenterSection.style.backgroundImage=`url('${imagenCenter}')`;
-    imgCenterSection.style.backgroundSize= 'cover';
-    imgCenterSection.style.backgroundRepeat= 'no-repeat';
-    imgCenterSection.style.backgroundPosition= 'center';
-})
-
-urlImgMobile.addEventListener('change', () =>{
-    if (window.screen.width <= 800){
-        asidePanel.classList.add('responsive') 
-     } else{ 
-         asidePanel.classList.remove('responsive')
-      };
-    const imagenCenter = urlImgMobile.value;
     imgCenterSection.style.backgroundImage=`url('${imagenCenter}')`;
     imgCenterSection.style.backgroundSize= 'cover';
     imgCenterSection.style.backgroundRepeat= 'no-repeat';
@@ -321,8 +308,6 @@ const panelResponsive = () =>{
 };
 
 
-
-
 closeBtn.addEventListener('click', () => {
     asidePanel.style.display = 'none';
 });
@@ -342,4 +327,3 @@ domtoimage.toBlob(section)
         saveAs(blob, 'my-node.png');
     })
 }
-
