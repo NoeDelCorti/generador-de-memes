@@ -70,6 +70,15 @@ imgNavHeader = document.getElementById('img-nav-header');
 
 // PESTAÑA IMAGEN
 
+const panelResponsive = () =>{
+    if (window.screen.width <= 800){
+       asidePanel.classList.add('responsive') 
+    } else{ 
+        asidePanel.classList.remove('responsive')
+     }
+    
+};
+
 imgNavHeader.addEventListener('click', () =>{
     asidePanel.style.display='block';
     imgForm.style.display='block';
@@ -84,7 +93,7 @@ textNavHeader.addEventListener('click', () =>{
     asidePanel.style.display='block';
     textForm.style.display='block';
     imgForm.style.display='none';
-    panelResponsive()
+    panelResponsive();
 }); // Elegir opción panel de texto
 
 
@@ -298,14 +307,7 @@ resetButton.addEventListener('click', (e) => {
 
 // FUNCIÓN PARA EL RESPONSIVE PANELES
 
-const panelResponsive = () =>{
-    if (window.screen.width <= 800){
-       asidePanel.classList.add('responsive') 
-    } else{ 
-        asidePanel.classList.remove('responsive')
-     }
-    
-};
+
 
 
 closeBtn.addEventListener('click', () => {
