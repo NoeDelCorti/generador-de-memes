@@ -47,7 +47,8 @@ const darkButton = document.getElementById('dark-button'); // boton contono oscu
 // PANEL IMAGEN
 const imgForm = document.getElementById('img-form'); // formulario imagen - pestaña imagen -aside
 const urlImg = document.getElementById('url-img'); // input url imagen - pestaña imagen - aside
-const urlImgMobile = document.getElementsByClassName('ulr-img-mobile')[0];
+console.log(urlImg);
+/* const urlImgMobile = document.getElementsByClassName('ulr-img-mobile')[0]; */
 const imgFondo = document.getElementById('img-fondo'); // input tipo color para cambiar fondo de imagen panel imagen - aside
 const effect = document.getElementById('effect'); // id del select que despliega las opciones de efectos de fondo
 // FILTROS EFECTOS IMAGEN
@@ -141,7 +142,7 @@ urlImg.addEventListener('keyup', () =>{
     imgCenterSection.style.backgroundPosition= 'center';
 })
 
-urlImgMobile.addEventListener('blur', () =>{
+urlImg.addEventListener('blur', () =>{
     /* consol.log(urlImg) */
     const imagenCenter = urlImg.value;
     imgCenterSection.style.backgroundImage=`url('${imagenCenter}')`;
