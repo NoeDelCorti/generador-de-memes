@@ -133,7 +133,7 @@ option.addEventListener('change', () =>{
 
 // EVENTOS PARA FORMULARIO IMAGEN - poner una imagen url
 
-urlImg.addEventListener('keyup', () =>{
+urlImg.addEventListener('input', () =>{
     /* consol.log(urlImg) */
     const imagenCenter = urlImg.value;
     imgCenterSection.style.backgroundImage=`url('${imagenCenter}')`;
